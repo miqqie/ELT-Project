@@ -4,7 +4,7 @@ After creating the schema, we will be implementing this using DBT (Data Build To
 > 2. Check the **dbt_project_yml** is referencing to the correct dataset in BigQuery.
 > 3. Create a **profiles.yml** which store the configuration settings for your database connections, which includes connection details like:
   <br> a. Database type (e.g., Snowflake, Postgres, BigQuery, etc.)
-> <br> b. Credentials (username, password, etc.)
+> <br> b. Credentials (username etc.)
 > <br> c. Host, port, schema, and database details
 > <br> d. Target configurations (e.g., development, production environments)
 > <br> e. Connection parameters specific to the data warehouse
