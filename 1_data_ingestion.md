@@ -4,7 +4,7 @@ The first phase of the project involved the **ingestion of the Olist Kaggle data
    - the respective directories to store files were also created
    - certain options for Pandas were also set (e.g. pd.set_option('display.max_colwidth', None) which allows the viewing of all columns without the df being truncated)
 > <br> b) Set Up and Download Kaggle Token
-   - 
+   - a token (kaggle.json) was created under "Settings" in Kaggle and then downloaded into the local directory
 > <br> c) Configure Kaggle and Google Cloud
 > <br> d) Set Up Key for Service Account in Google Cloud Storage - the service account Key for Google was created and downloaded into the local directory
 > <br> e) Grant Storage Bucket Creation and Read Permission 
