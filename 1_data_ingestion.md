@@ -1,5 +1,3 @@
-![Flowchart_1drawio.drawio.png](attachment:fd8248b8-2ad1-46c7-9d63-8f0f3ce6f6e5.png)
-
 The first phase of the project involved the **ingestion of the Olist Kaggle dataset into Bigquery** , which was done using the following steps:
 >  a) Create and Set Directory to Work In 
 > <br> b) Set Up and Download Kaggle Token 
