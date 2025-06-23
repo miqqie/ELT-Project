@@ -7,7 +7,7 @@
 
 To answer the identified business questions, our analysis has focused on these key areas:
 
-> 1.**Analyze volume and value of transaction across different time periods**. This could help to identify how 
+> 1.**Analyze volume and value of transaction across different time periods**. This could help to identify when and why transactions could peak at certain timings. Promotion/marketing campagins can then be tailored accordingly. 
 <br> 2. **Analyze customers reviews to extract sentiment and common themes**. This could help to improve product quality and customer service and boost sales.
 <br> 3. **Analyze order fulfillment times, shipping delays, and delivery performance**. This could help to improve the customer experience and boost sales.
 <br> 4. **Analyse data on customers and sellers** on location and impact on customer satisfaction.
