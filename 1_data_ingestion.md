@@ -27,8 +27,27 @@ The first phase of the project involved the **ingestion of the Olist Kaggle data
 
 ### f) Create the Google Storage Bucket
    - the storage was created using the json file downloaded earlier in d)
+     
 ### g) Download the Kaggle Dataset and Unzip Zipped Folder
+   - the zipped file was downloaded via the Kaggle token created in b) and unzipped into the specified local directory
 ### h) Do some Data Cleaning and Validation
+
+| CSV File                          | Validation / Cleaning Step                                                                                                                             |
+|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **All CSVs**                      | - Trim all string data                                                                                                                                  |
+|                                   | - Drop exact duplicate rows (across all columns)                                                                                                       |
+|                                   | - Ensure first column contains unique, non-null values (assumed to be primary key)                                                                     |
+|                                   | - Convert columns with names containing `"date"`, `"timestamp"`, or `"approved at"` to `datetime`                                                     |
+|                                   | - Ensure datetime values fall between **2016 and 2018**, inclusive                                                                                      |
+|                                   | - If there are 2+ datetime columns, ensure the **first one contains the earliest date**                                                                |
+|                                   | - Ensure all columns with `"price"` or `"value"` in the name are **non-negative**                                                                      |
+| `olist_order_reviews_dataset.csv` | - Enclose freeform text in `review_comment_title` and `review_comment_message` columns with double quotes                                               |
+| `olist_geolocation_dataset.csv`   | - Validate that `latitude` and `longitude` values fall within Brazil's geographical bounds                                                             |
+| `olist_orders_dataset.csv`        | - `delivery_date` must not be earlier than `shipped_date`                                                                                              |
+|                                   | - If `order_status` is `"delivered"`, `delivery_date` must **not be null**                                                                            |
+
+
+
 ### i) Upload the CSV Files to the Google Storage Bucket
 ### j) Load the Files from Google Storage to BigQuery
 ### k) Check that Number of Rows Tally Between Bigquery Tables and Local CSV Files
