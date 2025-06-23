@@ -23,4 +23,6 @@ Key tools used to implement these phases include Python, Google Storage/Bug Quer
 Through this project, we aim to provide valuable insights/actionables for the following business questions:
 
 > 1. What are some of the possible reasons that could explain a difference in consumer behaviour and their effects on transaction orders and revenue;
-> 2. What factors affect customer satisfaction and what can be done to improve customer satisfaction 
+> 2. What factors affect customer satisfaction and what can be done to improve customer satisfaction
+>
+The detailed codes and explainations can be found in notebook/Project_Group2_final.ipynb
