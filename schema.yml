@@ -1,0 +1,159 @@
+version: 2
+# expression_is_true doesn't apply to individual columns. so it should be nested under models
+models:
+  - name: fact_orders
+    description: "Fact table for orders."
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "total_payment_value >= 0"
+          expression: "CASE WHEN order_status='delivered' THEN ROUND(total_price + total_freight_value, 2) = ROUND(total_payment_value, 2)  ELSE TRUE END"
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('dim_delivery_milestones')
+              field: order_id
+      - name: customer_id
+        description: "The foreign key to dim_customers"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id              
+      - name: total_price
+        description: "The total price of the order"
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null:
+              where: "order_status = 'delivered'"
+      - name: total_freight_value
+        description: "The total freight value of the order"
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null:
+             where: "order_status = 'delivered'"
+
+  - name: dim_delivery_milestones
+    description: "Dimension table for delivery milestone dates"
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "days_taken_to_deliver >= days_taken_to_ship"
+    columns: 
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('fact_orders')
+              field: order_id
+    
+  
+  - name: dim_order_details
+    description: "Dimension table for order details"
+    tests: 
+      - dbt_utils.expression_is_true:
+          expression: "number_of_items_in_order > 0 AND number_of_distinct_products_in_order > 0 AND number_of_distinct_sellers_in_order > 0"
+    columns: 
+      - name: orderid_orderitemid_composite_key
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: order_item_id
+        tests: 
+          - not_null
+      - name: product_id 
+        tests: 
+          - not_null
+      - name: seller_id
+        tests: 
+          - relationships:
+             to: ref('dim_sellers')
+             field: seller_id
+
+  - name: dim_customers
+    description: "Dimension table for customers"
+    tests: 
+      - dbt_utils.expression_is_true:
+          expression: "customer_zip_code_prefix < 100000"
+    columns: 
+      - name: customer_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: customer_unique_id
+        tests:
+          - not_null
+
+  - name: dim_sellers
+    description: "Dimension table for sellers"
+    tests: 
+      - dbt_utils.expression_is_true:
+          expression: "seller_zip_code_prefix < 100000"
+    columns: 
+      - name: seller_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+   
+  - name: dim_reviews
+    description: "Dimension table for reviews"
+    tests: 
+      - dbt_utils.expression_is_true:
+          expression: "days_taken_to_write_review >= 1"
+          expression: "review_score <= 5"
+    columns: 
+      - name: review_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null  
+      - name: order_id
+        tests: 
+          - relationships:
+             to: ref('fact_orders')
+             field: order_id
+      
+  - name: dim_payments
+    description: "Dimension table for payments"
+    tests: 
+      - dbt_utils.expression_is_true:
+          expression: "payment_sequential >= 1"
+          expression: "payment_installments >= 1"
+          expression: "payment_per_payment_type_per_order >= 0"
+    columns: 
+      - name: orderid_paymentseq_composite_key
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null  
+      - name: order_id
+        tests: 
+          - relationships:
+             to: ref('fact_orders')
+             field: order_id
+      
+  - name: dim_product_details
+    description: "Dimension table for product details"
+    tests: 
+      - dbt_utils.expression_is_true:
+          expression: "product_weight_g > 0"
+          expression: "product_length_cm > 0"
+          expression: "product_height_cm > 0"
+          expression: "product_width_cm > 0"
+          expression: "product_photos_qty >= 0"
+    columns: 
+      - name: product_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null  
+          - relationships:
+             to: ref('order_details')
+             field: product_id
+     
