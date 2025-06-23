@@ -1,5 +1,7 @@
 ### <u> Key Business Questions </u>
 
+> 1. What are some of the possible reasons that could explain a difference in consumer behaviour and their effects on transaction orders and revenue;
+> 2. What factors affect customer satisfaction and what can be done to improve customer satisfaction
 
 ### <u> Key Areas of Analysis </u>
 
