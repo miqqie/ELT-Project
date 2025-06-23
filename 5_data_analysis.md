@@ -1,6 +1,6 @@
 ### <u> Key Areas of Analysis </u>
 
-To answer the idenified business questions, our analysis has focused on these key areas:
+To answer the identified business questions, our analysis has focused on these key areas:
 
 > 1. **Analyze order fulfillment times, shipping delays, and delivery performance**. This could help to improve the customer experience and boost sales.
 > 2. **Analyze customers reviews to extract sentiment and common themes**. This could help to improve product quality and customer service and boost sales.
