@@ -64,9 +64,13 @@ Summary Table of the Data Cleanings and Checks
 
 
  - further checks were done on csv files that failed the above tests
- - 
+   
 ### i) Upload the CSV Files to the Google Storage Bucket
+  - after the files were successfully cleaned, they were uploaded to Google Storage
+    
 ### j) Load the Files from Google Storage to BigQuery
+  - last but not least, the files were loaded into Bigquery
+
 ### k) Check that Number of Rows Tally Between Bigquery Tables and Local CSV Files
    - this was to ensure all the data have been uploaded successfully onto Bigquey
    - based on this check, all rows from all csv files were loaded successfully
