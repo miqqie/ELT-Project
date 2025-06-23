@@ -31,6 +31,7 @@ The first phase of the project involved the **ingestion of the Olist Kaggle data
 ### g) Download the Kaggle Dataset and Unzip Zipped Folder
    - the zipped file was downloaded via the Kaggle token created in b) and unzipped into the specified local directory
 ### h) Do some Data Cleaning and Validation
+   - the following data cleaning/checks were done to the csv files:
 
 | CSV File                          | Validation / Cleaning Step                                                                                                                             |
 |-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
