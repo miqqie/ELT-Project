@@ -9,4 +9,4 @@ The first phase of the project involved the **ingestion of the Olist Kaggle data
 > <br> h) Do some Data Cleaning and Validation
 > <br> i) Upload the CSV Files to the Google Storage Bucket
 > <br> j) Load the Files from Google Storage to BigQuery
-> <br> k) Check that Number of Rows Tally Between BIgquery Tables and Local CSV Files
+> <br> k) Check that Number of Rows Tally Between Bigquery Tables and Local CSV Files
