@@ -12,6 +12,8 @@ The relationship definition and validation checks are grouped into these followi
 
 In total, there were a **total of 37 tests**. 
 
+Please refer to 4i_schema.yml for the full code.
+
 **dbt test** was run and a total of 1 tests failed. The test that failed was:
 
 1. Sum of total price and total freight value should equate to total payment value of the order when delivery status is "delivered" (569)
