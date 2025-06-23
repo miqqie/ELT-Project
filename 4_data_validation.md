@@ -16,4 +16,7 @@ In total, there were a **total of 37 tests**.
 
 1. Sum of total price and total freight value should equate to total payment value of the order when delivery status is "delivered" (569)
 
+![Screenshot 2025-06-22 221443](https://github.com/user-attachments/assets/6b9a5340-456b-4565-a6bf-4d7e59adcf93)
+
 But given the relatively small number out of about 99000 orders, these rows can be dropped during the data analysis section.
+
