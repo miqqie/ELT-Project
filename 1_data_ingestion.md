@@ -25,8 +25,8 @@ The first phase of the project involved the **ingestion of the Olist Kaggle data
   - Creation of a Google Cloud Storage bucket.
   - Read access for BigQuery ingestion.
 
-> <br> f) Create the Google Storage Bucket
-   - 
+### f) Create the Google Storage Bucket
+   - the storage was created using the json file downloaded earlier in d)
 > <br> g) Download the Kaggle Dataset and Unzip Zipped Folder
 > <br> h) Do some Data Cleaning and Validation
 > <br> i) Upload the CSV Files to the Google Storage Bucket
