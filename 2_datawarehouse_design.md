@@ -17,3 +17,19 @@ The fact table **fact_orders** contain the most **critical data fields that will
 | `total_price`              | Total value of the items in the order (excluding freight). Calculated in the preliminary data cleaning earlier.                                                |
 | `total_freight_value`      | Total freight cost associated with the order. Calculated in the preliminary data cleaning earlier.                                                              |
 | `total_payment_value`      | Total transaction value associated with the order.  Calculated in the preliminary data cleaning earlier.                                                            |
+
+The dim tables, which are the **descriptive companions** to the fact table by providing context to the measurable facts are as follows:
+
+### 🧾 Dimension Table: `dim_delivery_milestones`
+
+| Column Name               | Description                                                                                          |
+|---------------------------|------------------------------------------------------------------------------------------------------|
+| `order_id`                | Primary key for this table and foreign key to the fact table                                                                        |
+| `order_status`       | Status of the order|
+| `order_purchase_timestamp` | Timestamp of when the order was placed
+| `order_approved_at`       | Payment approval timestamp|
+| `order_delivered_carrier_date`| Order posting timestamp                                                   |
+| `order_delivered_customer_date`| Actual order delivery date                                 |
+| `order_estimated_delivery_date ` | Estimated delivery date that was informed to customer                                                                |
+| `invalid_carrier_delivery`     | Column to indicate whether order_delivered_carrier_date was made null becuase it was earlier than  order_purchase_timestamp in the raw data    
+
