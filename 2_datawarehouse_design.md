@@ -82,3 +82,32 @@ The dim tables, which are the **descriptive companions** to the fact table by pr
 | `review_comment_message` | Comment message from the review left by the customer, in Portuguese |
 | `review_creation_date` | Shows the date in which the satisfaction survey was sent to the customer.                                |
 | `review_answer_timestamp`     | Shows satisfaction survey answer timestamp |
+
+### 🧾 Dimension Table: `dim_payments`
+
+| Column Name               | Description                                                                                          |
+|---------------------------|------------------------------------------------------------------------------------------------------|
+| `orderid_paymentseq_composite_key` | Primary key of this table                                 |
+| `order_id`                | Foreign key to the fact table                                                                        |
+| `customer_id` | Foreign key to dim_customer |
+| `payment_sequential `       | A customer may pay an order with more than one payment method. If he does so, a sequence will be created to accommodate all payments|
+| `payment_type`| Method of payment chosen by the customer                                                 |
+| `payment_installments` | Number of installments chosen by the customer |
+| `payment_value` | Transaction value|
+
+### 🧾 Dimension Table: `dim_product_details`
+
+| Column Name               | Description                                                                                          |
+|---------------------------|------------------------------------------------------------------------------------------------------|
+| `product_id`                | Primary key for this table and foreign key to dim_order_details                                                                        |
+| `product_category_name` | Root category of product, in Portuguese |
+| `product_category_name_english` | Category name in English
+| `product_name_lenght`       | Number of characters extracted from the product name|
+| `product_description_lenght`| Number of characters extracted from the product description.                                                 |
+| `product_photos_qty` | Number of product published photos |
+| `product_weight_g` | Product weight measured in grams|
+| `product_length_cm` | Product length measured in centimeters                                 |
+| `product_height_cm` | Product height measured in centimeters                                |
+| `product_width_cm` | Product width measured in centimeters                                |
+
+Additional new columns will be added to the tables when data transformation is performed in the next phase.
