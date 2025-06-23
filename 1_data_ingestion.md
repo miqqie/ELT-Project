@@ -72,7 +72,7 @@ Summary Table of the Data Cleanings and Checks
   - last but not least, the files were loaded into Bigquery
 
 ### k) Check that Number of Rows Tally Between Bigquery Tables and Local CSV Files
-   - this was to ensure all the data have been uploaded successfully onto Bigquey
+   - this was to ensure all the data have been uploaded successfully onto Bigquery
    - based on this check, all rows from all csv files were loaded successfully
 
 | CSV File                                  | Local Row Count | BigQuery Table                          | BigQuery Row Count | Status   |
