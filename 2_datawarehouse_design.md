@@ -2,7 +2,7 @@ The second phase involved the creation of one fact table and 6 dim tables, which
 
 ![schema](https://github.com/user-attachments/assets/67ee2e94-9573-474a-8281-bfcd813aad1e)
 
-The fact table **fact_orders" contain e most **critical data fields that will form a good base for analysis regarding dollar value metrics per customer or per order.**
+The fact table **fact_orders** contain the most **critical data fields that will form a good base for analysis regarding dollar value metrics per customer or per order.**
 
 ### 🧾 Fact Table: `fact_orders`
 
