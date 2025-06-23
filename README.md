@@ -25,6 +25,6 @@ Through this project, we aim to provide valuable insights/actionables for the fo
 > 1. What are some of the possible reasons that could explain a difference in consumer behaviour and their effects on transaction orders and revenue;
 > 2. What factors affect customer satisfaction and what can be done to improve customer satisfaction
 >
-The full codes and explanations can be found in notebook/Project_Group2_final.ipynb. If there are issues viewing/rendering the file, please refer to notebook/Project_Group2_final_clearop.ipynb, where the cell ouputs have been cleared.
+The full codes and explanations can be found in notebooks/Project_Group2_final.ipynb. If there are issues viewing/rendering the file, please refer to notebook/Project_Group2_final_clearop.ipynb, where the cell ouputs have been cleared.
 
 Altenatively, there are more bite-sized sections on the main branch, each corresponding to a key phase as outlined above.
