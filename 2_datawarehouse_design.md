@@ -46,3 +46,39 @@ The dim tables, which are the **descriptive companions** to the fact table by pr
 | `shipping_limit_date`               | Shows the seller shipping limit date for handling the order over to the logistic partner              |
 | `price`                             | Item price                                                                                            |
 | `freight_value`                     | Item freight value item (if an order has more than one item the freight value is split between items) |
+
+### 🧾 Dimension Table: `dim_customers`
+
+| Column Name               | Description                                                                                          |
+|---------------------------|------------------------------------------------------------------------------------------------------|
+| `customer_id`                |	Primary key for this table and foreign key to the fact table. An customer id generated for every order.                                                                       |
+| `customer_unique_id `       | Unique customer ID|
+| `customer_zip_code_prefix`| First five digits of customer zip code                                                 |
+| `customer_city` | Customer City |
+| `customer_state  ` | Customer State|
+| `geolocation_lat` | Latitude of the customer's location                                |
+| `geolocation_lng`     | Longitude of the customer's location |
+
+### 🧾 Dimension Table: `dim_sellers`
+
+| **Column Name**          | **Description**                      |
+| ------------------------ | ------------------------------------ |
+| `seller_id`              | Primary key of this table            |
+| `seller_zip_code_prefix` | First five digits of seller zip code |
+| `seller_city`            | Seller city                          |
+| `seller_state`           | Seller state                         |
+| `geolocation_lat`        | Latitude of the seller's location    |
+| `geolocation_lng`        | Longitude of the seller's location   |
+
+### 🧾 Dimension Table: `dim_reviews`
+
+| Column Name               | Description                                                                                          |
+|---------------------------|------------------------------------------------------------------------------------------------------|
+| `review_id`                | Primary key of this table                                                                       |
+| `order_id `       | Foreign key to the fact table |
+| `customer_id`       | Foreign key to dim_customers  |
+| `review_score`| Score ranging from 1 to 5 given by the customer on a satisfaction survey                                                 |
+| `review_comment_title ` | Comment title from the review left by the customer, in Portuguese. |
+| `review_comment_message` | Comment message from the review left by the customer, in Portuguese |
+| `review_creation_date` | Shows the date in which the satisfaction survey was sent to the customer.                                |
+| `review_answer_timestamp`     | Shows satisfaction survey answer timestamp |
