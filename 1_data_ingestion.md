@@ -27,11 +27,11 @@ The first phase of the project involved the **ingestion of the Olist Kaggle data
 
 ### f) Create the Google Storage Bucket
    - the storage was created using the json file downloaded earlier in d)
-> <br> g) Download the Kaggle Dataset and Unzip Zipped Folder
-> <br> h) Do some Data Cleaning and Validation
-> <br> i) Upload the CSV Files to the Google Storage Bucket
-> <br> j) Load the Files from Google Storage to BigQuery
-> <br> k) Check that Number of Rows Tally Between Bigquery Tables and Local CSV Files
+### g) Download the Kaggle Dataset and Unzip Zipped Folder
+### h) Do some Data Cleaning and Validation
+### i) Upload the CSV Files to the Google Storage Bucket
+### j) Load the Files from Google Storage to BigQuery
+### k) Check that Number of Rows Tally Between Bigquery Tables and Local CSV Files
    - this was to ensure all the data have been uploaded successfully onto Bigquey
    - based on this check, all rows from all csv files were loaded successfully
 
