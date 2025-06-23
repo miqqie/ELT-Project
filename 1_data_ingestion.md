@@ -18,3 +18,15 @@ The first phase of the project involved the **ingestion of the Olist Kaggle data
 > <br> i) Upload the CSV Files to the Google Storage Bucket
 > <br> j) Load the Files from Google Storage to BigQuery
 > <br> k) Check that Number of Rows Tally Between Bigquery Tables and Local CSV Files
+
+| CSV File                                  | Local Row Count | BigQuery Table                          | BigQuery Row Count | Status   |
+|-------------------------------------------|------------------|------------------------------------------|---------------------|----------|
+| olist_order_items_dataset_cleaned.csv     | 112,650          | olist_order_items_dataset_cleaned       | 112,650             | ✅ Match |
+| olist_sellers_dataset.csv                 | 3,095            | olist_sellers_dataset                   | 3,095               | ✅ Match |
+| olist_products_dataset.csv                | 32,951           | olist_products_dataset                  | 32,951              | ✅ Match |
+| olist_customers_dataset.csv               | 99,441           | olist_customers_dataset                 | 99,441              | ✅ Match |
+| olist_order_payments_dataset_cleaned.csv  | 103,886          | olist_order_payments_dataset_cleaned    | 103,886             | ✅ Match |
+| olist_geolocation_dataset_cleaned.csv     | 19,011           | olist_geolocation_dataset_cleaned       | 19,011              | ✅ Match |
+| olist_orders_dataset_cleaned.csv          | 99,441           | olist_orders_dataset_cleaned            | 99,441              | ✅ Match |
+| product_category_name_translation.csv     | 71               | product_category_name_translation       | 71                  | ✅ Match |
+| olist_order_reviews_dataset_cleaned.csv   | 98,110           | olist_order_reviews_dataset_cleaned     | 98,110              | ✅ Match |
