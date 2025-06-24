@@ -27,4 +27,4 @@ Through this project, we aim to provide valuable insights/actionables for the fo
 >
 The full codes and explanations can be found in notebooks/Project_Group2_final.ipynb. If there are issues viewing/rendering the file, please refer to notebook/Project_Group2_final_clearop.ipynb, where the cell ouputs have been cleared.
 
-Altenatively, there are more bite-sized sections on the main branch, each corresponding to a key phase as outlined above.
+Altenatively, there are more bite-sized sections on the main branch, each corresponding to one of the five key phases as outlined above.
