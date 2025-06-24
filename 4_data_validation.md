@@ -22,3 +22,4 @@ Please refer to 4i_schema.yml for the full code.
 
 But given the relatively small number out of about 99000 orders, these rows can be dropped during the data analysis section.
 
+The full set of tests can be found in 4ii_schema.yml
