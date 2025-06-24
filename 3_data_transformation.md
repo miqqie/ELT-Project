@@ -15,7 +15,8 @@ After creating the schema, we will be implementing this using DBT (Data Build To
 Besides the original data fields, various new data fields were created to facilitate data analysis later.
 
 a) fact_orders
-<br> fact_orders was created by joining data fields from 4 raw table
+<br> fact_orders was created by joining data fields from 4 raw tables
+
 b) dim_delivery_milestones
 <br> 4 new fields calculating the difference in the number of days between important delivery milestones were also created. In addition, a binary variable ("Y"/"N") was also created for easy identification of later-than-expected deliveries.
 
