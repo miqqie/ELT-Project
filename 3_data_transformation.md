@@ -17,22 +17,24 @@ Besides the original data fields, various new data fields were created to facili
 a) fact_orders
 
 b) dim_delivery_milestones
-4 new fields calculating the difference in the number of days between important delivery milestones were also created. In addition, a binary variable ("Y"/"N") was also created for easy identification of later-than-expected deliveries.
+<br> 4 new fields calculating the difference in the number of days between important delivery milestones were also created. In addition, a binary variable ("Y"/"N") was also created for easy identification of later-than-expected deliveries.
 
 c) dim_order_details
-Besides obtaining the original data fields by joining the raw tables, we also created a few new data fields that sum **certain data by order** (e.g. number of items per order). 
+<br> Besides obtaining the original data fields by joining the raw tables, we also created a few new data fields that sum **certain data by order** (e.g. number of items per order). 
 
 d) dim_customers
-The dim table was created by joining data from 2 raw tables to facilitate geo-location analysis.
+<br> The dim table was created by joining data from 2 raw tables to facilitate geo-location analysis.
 
 e) dim_sellers
-The dim table was created by joining data from 2 raw tables to facilitate geo-location analysis.
+<br> The dim table was created by joining data from 2 raw tables to facilitate geo-location analysis.
 
 f) dim_reviews
-The dim table was created by joining data from 2 raw tables. One new data field to calculate the difference in the number of days between the 2 review-related date columns was added.
+<br> The dim table was created by joining data from 2 raw tables. One new data field to calculate the difference in the number of days between the 2 review-related date columns was added.
 
 g) dim_payments
-The dim table was created by joining data from 2 raw tables. Two new data fields were created to facilitate analysis per order.
+<br> The dim table was created by joining data from 2 raw tables. Two new data fields were created to facilitate analysis per order.
 
 h) dim_product_details
-The dim table was created by joining data from 2 raw tables.
+<br> The dim table was created by joining data from 2 raw tables.
+
+Please refer to the respective sql tables for more information.
