@@ -15,3 +15,8 @@ After creating the schema, we will be implementing this using DBT (Data Build To
 Besides the original data fields, various new data fields were created to facilitate data analysis later.
 i) dim_delivery_milestones
 4 new fields calculating the difference in the number of days between important delivery milestones were also created. In addition, a binary variable ("Y"/"N") was also created for easy identification of later-than-expected deliveries.
+
+
+### ii) dim_order_details
+
+Besides obtaining the original data fields by joining the raw tables, we also created a few new data fields that sum **certain data by order** (e.g. number of items per order). 
