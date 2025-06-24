@@ -12,6 +12,6 @@ After creating the schema, we will be implementing this using DBT (Data Build To
 > 5. Run **dbt_debug** to test the connection to the raw tables
 > 6. Create sql to make the fact and dim tables
 
-
+Besides the original data fields, various new data fields were created to facilitate data analysis later.
 i) dim_delivery_milestones
 4 new fields calculating the difference in the number of days between important delivery milestones were also created. In addition, a binary variable ("Y"/"N") was also created for easy identification of later-than-expected deliveries.
