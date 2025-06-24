@@ -50,3 +50,4 @@ Top 5 Months (Transactions)
 
    ![Screenshot 2025-06-23 212303](https://github.com/user-attachments/assets/413db976-e1bf-4955-b6c9-ab3aa10fc966)
 
+The full codes and more details can be found in 5i_data_analysis.ipynb
