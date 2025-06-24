@@ -11,3 +11,6 @@ After creating the schema, we will be implementing this using DBT (Data Build To
 > 4. Under the models subfolder, create a **sources.yml** that will contain all the names and locations of the raw tables in BigQuery referenced in the fact and dim tables.
 > 5. Run **dbt_debug** to test the connection to the raw tables
 > 6. Create sql to make the fact and dim tables
+
+
+4 new fields calcualting the difference in the number of days between important delivery milestones were also created
