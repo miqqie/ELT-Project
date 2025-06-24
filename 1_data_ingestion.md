@@ -86,3 +86,5 @@ Summary Table of the Data Cleanings and Checks
 | olist_orders_dataset_cleaned.csv          | 99,441           | olist_orders_dataset_cleaned            | 99,441              | ✅ Match |
 | product_category_name_translation.csv     | 71               | product_category_name_translation       | 71                  | ✅ Match |
 | olist_order_reviews_dataset_cleaned.csv   | 98,110           | olist_order_reviews_dataset_cleaned     | 98,110              | ✅ Match |
+
+For the full code and explanation, please refer to 1i_data_ingestion.ipynb
