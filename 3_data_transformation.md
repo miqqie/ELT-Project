@@ -13,4 +13,4 @@ After creating the schema, we will be implementing this using DBT (Data Build To
 > 6. Create sql to make the fact and dim tables
 
 
-4 new fields calcualting the difference in the number of days between important delivery milestones were also created
+4 new fields calculating the difference in the number of days between important delivery milestones were also created. In addition, a binary variable ("Y"/"N") was also created for easy identification of later-than-expected deliveries.
