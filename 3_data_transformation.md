@@ -14,28 +14,14 @@ After creating the schema, we will be implementing this using DBT (Data Build To
 
 Besides the original data fields, various new data fields were created to facilitate data analysis later.
 
-a) fact_orders
-<br> fact_orders was created by joining data fields from 4 raw tables
+| Table Name            | Description |
+|----------------------|-------------|
+| `fact_orders`        | Created by joining data fields from 4 raw tables. |
+| `dim_delivery_milestones` | Includes 4 new fields calculating date differences between delivery milestones, plus a binary "Y"/"N" variable for identifying late deliveries. |
+| `dim_order_details`  | Includes original data fields from joined raw tables, plus new fields summing certain data per order (e.g., number of items per order). |
+| `dim_customers`      | Created by joining data from 2 raw tables to facilitate geo-location analysis. |
+| `dim_sellers`        | Created by joining data from 2 raw tables to facilitate geo-location analysis. |
+| `dim_reviews`        | Created by joining data from 2 raw tables; includes a new field calculating the difference in days between 2 review-related dates. |
+| `dim_payments`       | Created by joining data from 2 raw tables; includes two new fields for order-level analysis. |
+| `dim_product_details`| Created by joining data from 2 raw tables. |
 
-b) dim_delivery_milestones
-<br> 4 new fields calculating the difference in the number of days between important delivery milestones were also created. In addition, a binary variable ("Y"/"N") was also created for easy identification of later-than-expected deliveries.
-
-c) dim_order_details
-<br> Besides obtaining the original data fields by joining the raw tables, we also created a few new data fields that sum **certain data by order** (e.g. number of items per order). 
-
-d) dim_customers
-<br> The dim table was created by joining data from 2 raw tables to facilitate geo-location analysis.
-
-e) dim_sellers
-<br> The dim table was created by joining data from 2 raw tables to facilitate geo-location analysis.
-
-f) dim_reviews
-<br> The dim table was created by joining data from 2 raw tables. One new data field to calculate the difference in the number of days between the 2 review-related date columns was added.
-
-g) dim_payments
-<br> The dim table was created by joining data from 2 raw tables. Two new data fields were created to facilitate analysis per order.
-
-h) dim_product_details
-<br> The dim table was created by joining data from 2 raw tables.
-
-Please refer to the respective sql tables for more information.
